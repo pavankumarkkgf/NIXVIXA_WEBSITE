@@ -24,3 +24,11 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.cal-inline-container::-webkit-scrollbar {
+  display: none;
+}
+
+.cal-inline-container {
+  scrollbar-width: none;
+}
