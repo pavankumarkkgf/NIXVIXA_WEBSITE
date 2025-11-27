@@ -71,14 +71,14 @@ const FooterPage = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <motion.a
+              <motion.div
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-gradient-to-r from-[#3B82F6] to-[#8B5CF6] px-8 py-4 rounded-xl text-white font-semibold hover:shadow-2xl hover:shadow-blue-500/25 duration-300 flex items-center gap-3"
+                className="bg-gradient-to-r from-[#3B82F6] to-[#8B5CF6] px-8 py-4 rounded-xl text-white font-semibold hover:shadow-2xl hover:shadow-blue-500/25 duration-300 flex items-center gap-3 cursor-pointer"
               >
                 <Link href='/contact'>Start Your Project</Link>
                 <ArrowRight size={20} />
-              </motion.a>
+              </motion.div>
               
               <motion.a
                 href="tel:+7996032595"
@@ -132,13 +132,13 @@ const FooterPage = () => {
               <ul className="space-y-3">
                 {services.map((service, index) => (
                   <li key={index}>
-                    <a 
+                    <Link 
                       href={service.href} 
                       className="text-[#94A3B8] hover:text-[#3B82F6] duration-300 flex items-center gap-2 group"
                     >
                       <div className="w-1.5 h-1.5 bg-[#3B82F6] rounded-full opacity-0 group-hover:opacity-100 duration-300"></div>
                       {service.name}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -154,13 +154,13 @@ const FooterPage = () => {
               <ul className="space-y-3">
                 {quickLinks.map((link, index) => (
                   <li key={index}>
-                    <a 
+                    <Link 
                       href={link.href} 
                       className="text-[#94A3B8] hover:text-[#3B82F6] duration-300 flex items-center gap-2 group"
                     >
                       <div className="w-1.5 h-1.5 bg-[#8B5CF6] rounded-full opacity-0 group-hover:opacity-100 duration-300"></div>
                       {link.name}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -253,8 +253,8 @@ const FooterPage = () => {
                 transition={{ duration: 0.6, delay: 0.2 }}
                 className="flex gap-6 text-sm text-[#64748B]"
               >
-                <a href="/privacy" className="hover:text-[#3B82F6] duration-300">Privacy Policy</a>
-                <a href="/terms" className="hover:text-[#3B82F6] duration-300">Terms of Service</a>
+                <Link href="/privacy" className="hover:text-[#3B82F6] duration-300">Privacy Policy</Link>
+                <Link href="/terms" className="hover:text-[#3B82F6] duration-300">Terms of Service</Link>
               </motion.div>
             </div>
           </div>
